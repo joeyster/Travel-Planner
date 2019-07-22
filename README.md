@@ -19,8 +19,13 @@ Create a list of places that you can visit and provide multiple ways to move bet
 *Provide a general discussion on the data structures and algorithms that were used to achieve the goals of the project*
 >You can make use of heuristics and a best-first search to implement this.
 
-# Usage <TBD>
-*Describe how to compile and run your program.*
+
+### Compile application - recommended
+1. using a virtual environment: virtual env venv
+2. source venv/bin/activate
+3. pip install requests
+4. python3.7 app.py
+
 
 
 # Summary
@@ -32,4 +37,8 @@ Create a list of places that you can visit and provide multiple ways to move bet
 
 
 # Technologies used
-1. Google API
+1. [Google API] (https://developers.google.com/maps/documentation/directions/start)
+2. Depth First search algorithm
+3. HTML, CSS
+4. Flask
+5. Heroku for deployment
