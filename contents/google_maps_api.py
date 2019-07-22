@@ -4,6 +4,8 @@
 # importing required libraries
 import requests, json
 
+api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
+
 class GoogleMapsUtility():
     def __init__(self,api_key,start_point,end_point):
         self.apikey = api_key
@@ -32,20 +34,10 @@ class GoogleMapsUtility():
                 distance_miles = distance.get("text")
                 # get the value from duration
                 duration_hours = duration.get("text")
-                print(distance_miles)
-                print(duration_hours)
+                return int(distance_miles.rstrip(" mi").replace(",", "")), duration_hours
         elif response.status_code != 200:
             print(response.status_code)
             print(response.json())
 
-# enter your api key here
-api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
-# Take source as input
-#start_point = input()
-start_point = 'anaheim'
-# Take destination as input
-#end_point = input()
-end_point = 'chicago'
 
-ob1 = GoogleMapsUtility(api_key,start_point,end_point)
-ob1.directionsRequest()
+        #duration hours later implement if have time
