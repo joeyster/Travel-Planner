@@ -10,7 +10,7 @@ Create a list of places that you can visit and provide multiple ways to move bet
    1. Contribution 1
    1. Contribution 2
    1. Contribution ...
-1. **Developer 3 (role)**
+1. Marzia Stanekzai
    1. Contribution 1
    1. Contribution 2
    1. Contribution ...
