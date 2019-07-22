@@ -37,7 +37,7 @@ Create a list of places that you can visit and provide multiple ways to move bet
 
 
 # Technologies used
-1. [Google API] (https://developers.google.com/maps/documentation/directions/start)
+1. [Google API](https://developers.google.com/maps/documentation/directions/start)
 2. Depth First search algorithm
 3. HTML, CSS
 4. Flask
