@@ -1,23 +1,31 @@
 ##
 # API KEY AIzaSyAY1aatbdVCglJhXI0HFddm5pEkPTUpBFU
-# python3.6
+#python3.6
 # importing required libraries
+"""
+using Google Maps API to get directions from \
+
+- start point to end end_point
+- purpose is
+- - to grab the distance in miles from start to end_point
+- - to grab time in hours and minutes from start to end point
+
+"""
 import requests, json
 
 api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
 
 class GoogleMapsUtility():
-    def __init__(self,api_key,start_point,end_point):
-        self.apikey = api_key
-        self.start_point = start_point
-        self.end_point = end_point
+
+    def __init__(self):
+        self.api_key = 'AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
 
 
-    def directionsRequest(self):
+    def directionsRequest(self, start_point, end_point):
         # url variable store url
         url ='https://maps.googleapis.com/maps/api/directions/json'
         # Get method of requests module
-        payload = {'key':api_key,'origin':self.start_point,'destination':self.end_point}
+        payload = {'key':self.api_key,'origin':start_point,'destination':end_point}
         # makes google directions API requests
         response = requests.get(url,params=payload)
         # grabs JSON object from API request
