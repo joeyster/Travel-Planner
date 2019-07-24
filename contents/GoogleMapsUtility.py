@@ -37,10 +37,12 @@ class GoogleMapsUtility():
                 # gets duration dictionary from json
                 duration = directions['duration']
                 # get the value from distance
-                distance_miles = distance.get("text")
+                distance_miles = distance.get("value") #meters
                 # get the value from duration
-                duration_hours = duration.get("text")
-                return int(distance_miles.rstrip(" mi").replace(",", "")), duration_hours
+                duration_hours = duration.get("value") #seconds
+                return int(distance_miles), int(duration_hours)
+                # return int(distance_miles.rstrip(" mi").replace(",", "")), duration_hours
+
         elif response.status_code != 200:
             print(response.status_code)
             print(response.json())
