@@ -1,5 +1,3 @@
-print("address imported")
-
 class Address():
     def __init__(self, address, distance, time):
         #google api 
@@ -10,4 +8,4 @@ class Address():
         self.children = {}
 
     def __str__(self):
-        return "~~~~~\naddress: " + str(self.address) + "\ndistance: " + str(self.distance) + "\ntime: " + str(self.time) + "\n~~~~~"
+        return "\n~~~~~\naddress: " + str(self.address) + "\ndistance: " + str(self.distance) + "\ntime: " + str(self.time) + "\n~~~~~"

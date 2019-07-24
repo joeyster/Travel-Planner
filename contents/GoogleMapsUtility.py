@@ -16,10 +16,8 @@ import requests, json
 api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
 
 class GoogleMapsUtility():
-
     def __init__(self):
         self.api_key = 'AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
-
 
     def directionsRequest(self, start_point, end_point):
         # url variable store url

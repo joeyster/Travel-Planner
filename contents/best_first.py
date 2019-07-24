@@ -1,5 +1,6 @@
 from address import Address
-from google_maps_api import GoogleMapsUtility
+from GoogleMapsUtility import GoogleMapsUtility
+import heapq
 
 
 # enter your api key here
@@ -7,41 +8,51 @@ api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
 
 class Best_First():
     def __init__(self, point_list, hit_list):
+        #list of strings addr
+        self.point_list = point_list
+        self.hit_list = hit_list 
+
         self.start = point_list[0]
-        self.end = point_list[-1]
-        self.hit_list = hit_list #list of address string
 
-        #nodes only
+        self.best_distance = 0
+        self.route = self.start
+
+        #priority queue
         self.open = []
-        self.closed = []
+        heapq.heapify(self.open)
 
-        self.algorithm()
+        self.algorithm(Address(self.start, 0, 0))
+
+    def __str__(self):
+        return f"~~~~~\nbest route: {self.route}\nbest distance: {self.best_distance}\n~~~~~"
     
-    def algorithm(self):
+    def algorithm(self, next_state):
+        if len(self.hit_list) == 0:
+            return "reached end"
         #starting at first point
-        root = Address(self.start, 0, 0)
-        # print(f"root.children: {root.children}")
+        root = next_state
 
         for point in range(len(self.hit_list)):
             #points are addresses
             point_A = root.address
             point_B = self.hit_list[point] 
 
-            connection = GoogleMapsUtility(api_key, point_A, point_B)
-            distance, time = connection.directionsRequest()
+            connection = GoogleMapsUtility()
+            distance, time = connection.directionsRequest(point_A, point_B)
 
-            if point == 0:
-                best_distance = distance
-                print(f"point_B: {point_B}")
-                print(f"best_distance: {best_distance}")
-            elif distance < best_distance:
-                best_distance = distance
-                print(f"point_B: {point_B}")
-                print(f"best_distance: {best_distance}")
+            heapq.heappush(self.open, (distance, point_B))
 
+            #add children to root. key = address, value = Address
             root.children[point_B] = Address(point_B, distance, time)
+        
+        popped = heapq.heappop(self.open) #(miles, addr)
+        miles = popped[0]
+        addr = popped[1]
 
-        # print(f"root.children: {root.children}")
-        # print(root.children["NV"])
-        # print(root.children["IL"])
-        # print(root.children["NY"])
+        self.route = self.route + " -> " + addr
+        self.best_distance = self.best_distance + miles
+
+        #remove explored from list
+        self.hit_list.remove(addr)
+
+        self.algorithm(root.children[addr]) #{addr : Address()}
