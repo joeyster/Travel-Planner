@@ -21,7 +21,7 @@ class Best_First():
         self.algorithm(Address(self.start, 0, 0))
 
     def __str__(self):
-        return f"~~~~~\nbest route: {self.route}\nbest distance: {round((self.best_distance/1000) * 0.62137)}\n~~~~~"
+        return f"~~~~~\nbest route: {self.route}\nbest distance: {self.meters_to_miles()}\n~~~~~"
     
     def algorithm(self, next_state):
         if len(self.hit_list) == 0:
@@ -53,3 +53,6 @@ class Best_First():
         self.hit_list.remove(addr)
 
         self.algorithm(root.children[addr]) #{addr : Address()}
+
+    def meters_to_miles(self):
+        return round((self.best_distance/1000) * 0.62137)
