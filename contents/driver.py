@@ -12,7 +12,5 @@ point_E = "Maine"
 #backend
 point_list = [point_A, point_B, point_C, point_D, point_E]
 hit_list = point_list[1:len(point_list)]
-hit_list_count = len(point_list)-2
-point_count = len(point_list)
 
-print(Best_First(point_list, hit_list))
+print(Best_First(point_list[0], hit_list))

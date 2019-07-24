@@ -7,12 +7,9 @@ import heapq
 api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
 
 class Best_First():
-    def __init__(self, point_list, hit_list):
-        #list of strings addr
-        self.point_list = point_list
+    def __init__(self, start, hit_list):
         self.hit_list = hit_list 
-
-        self.start = point_list[0]
+        self.start = start
 
         self.best_distance = 0
         self.route = self.start
