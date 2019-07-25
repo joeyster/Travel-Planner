@@ -13,7 +13,7 @@ def main():
     #ob1 = GoogleMapsUtility()
     user_in = False
     while user_in == False:
-        start_point = input("Enter destination: ")
+        start_point = input("Enter destination (City/State): ")
 
         point_list.append(start_point)
         hit_list = point_list[1:len(point_list)]
