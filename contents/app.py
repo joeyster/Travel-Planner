@@ -46,7 +46,7 @@ def main():
             user_in = True
         elif answer == 'y' or answer =='yes':
             user_in = False
-        elif answer != 'n' or answer != 'no':
+        else:
             print("Only enter yes or no")
 
     print(Best_First(point_list[0], hit_list, "distance"))
