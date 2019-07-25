@@ -1,27 +1,25 @@
 from GoogleMapsUtility import GoogleMapsUtility
+from best_first import Best_First
 
 
 """
-
-USE dFS
- - choose closest city from current point and go to next
-
-
+python3
 """
 
 def main():
 
-    graph_data = []
-    ob1 = GoogleMapsUtility()
+
+    point_list = []
+    #ob1 = GoogleMapsUtility()
     user_in = False
     while user_in == False:
-        start_point = input("Enter starting destination: ")
-        end_point = input("End destination: ")
-        #start_point = 'anaheim'
-        #end_point = 'chicago'
-        data = ob1.directionsRequest(start_point,end_point)
-        graph_data.append(data)
-        print(graph_data)
+        start_point = input("Enter destination: ")
+
+        point_list.append(start_point)
+        hit_list = point_list[1:len(point_list)]
+
+        #print(point_list)
+        #print(hit_list)
 
         answer = input("Enter another start to end destination? y/n: ")
         if answer == 'n':
@@ -30,4 +28,8 @@ def main():
         elif answer != 'n':
             print("Only enter yes or no")
 
-main()
+    print(Best_First(point_list[0], hit_list, "distance"))
+    print(Best_First(point_list[0], hit_list, "time"))
+
+if __name__ =="__main__":
+    main()
