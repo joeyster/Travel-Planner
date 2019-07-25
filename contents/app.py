@@ -21,10 +21,12 @@ def main():
         #print(hit_list)
 
         answer = input("Enter another destination? y/n: ")
-        if answer == 'n':
+        if answer == 'n' or answer =='no':
             # to break the while loop
             user_in = True
-        elif answer != 'n':
+        elif answer == 'y' or answer =='yes':
+            user_in = False
+        elif answer != 'n' or answer != 'no':
             print("Only enter yes or no")
 
     print(Best_First(point_list[0], hit_list, "distance"))
