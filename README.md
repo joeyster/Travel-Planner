@@ -27,7 +27,7 @@ Create a list of places that you can visit and provide multiple ways to move bet
 
 
 # Summary
-1. We will be allowing the user to enter their current major city and the major cities they want to travel to
+1. We will be allowing the user to enter a city or state which they would like to travel to
 2. We will use that information to pass an arguments to a GOOGLE MAP API request
   1. the Google map API request will give us the miles from the starting point to the other cities
   2. we will store that information to a data structure

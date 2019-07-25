@@ -13,7 +13,6 @@ using Google Maps API to get directions from \
 """
 import requests, json
 
-api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
 
 class GoogleMapsUtility():
     def __init__(self):
@@ -46,6 +45,7 @@ class GoogleMapsUtility():
         elif response.status_code != 200:
             print(response.status_code)
             print(response.json())
+            return response.status_code
 
 
         #duration hours later implement if have time

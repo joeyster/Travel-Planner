@@ -4,6 +4,26 @@ from best_first import Best_First
 
 """
 python3
+
+
+---------------- sample -----------------
+
+
+Enter destination (City/State): seattle
+Enter another destination? y/n: yes
+Enter destination (City/State): anaheim
+Enter another destination? y/n: y
+Enter destination (City/State): chicago
+Enter another destination? y/n: n
+~~~~~
+best route: seattle -> anaheim -> chicago
+best distance: 3171
+~~~~~
+~~~~~
+best route: seattle -> anaheim -> chicago
+best time: 1 days 23 hours 17 minutes
+~~~~~
+
 """
 
 def main():
