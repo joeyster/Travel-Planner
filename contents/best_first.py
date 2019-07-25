@@ -1,14 +1,14 @@
 from address import Address
 from GoogleMapsUtility import GoogleMapsUtility
 import heapq
-
+import copy
 
 # enter your api key here
 api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
 
 class Best_First():
     def __init__(self, start, hit_list, heuristic):
-        self.hit_list = hit_list.copy()
+        self.hit_list = copy.deepcopy(hit_list)
         self.start = start
 
         self.best_distance = 0
