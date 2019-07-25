@@ -20,6 +20,8 @@ class Best_First():
         #priority queue
         self.open = []
         heapq.heapify(self.open)
+        self.closed = []
+        heapq.heapify(self.closed)
 
         self.algorithm(Address(self.start, 0, 0))
 
@@ -53,6 +55,7 @@ class Best_First():
         
         # print(f"self.open: {self.open}")
         popped = heapq.heappop(self.open) #(miles/time, addr)
+        heapq.heappush(self.closed, popped)
         heuristic_value = popped[0]
         addr = popped[1]
 
