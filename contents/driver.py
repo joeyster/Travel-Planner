@@ -13,4 +13,5 @@ point_E = "Maine"
 point_list = [point_A, point_B, point_C, point_D, point_E]
 hit_list = point_list[1:len(point_list)]
 
-print(Best_First(point_list[0], hit_list))
+print(Best_First(point_list[0], hit_list, "distance"))
+print(Best_First(point_list[0], hit_list, "time"))
