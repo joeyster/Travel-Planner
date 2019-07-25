@@ -10,7 +10,6 @@ def main():
 
 
     point_list = []
-    #ob1 = GoogleMapsUtility()
     user_in = False
     while user_in == False:
         start_point = input("Enter destination (City/State): ")
@@ -21,7 +20,7 @@ def main():
         #print(point_list)
         #print(hit_list)
 
-        answer = input("Enter another start to end destination? y/n: ")
+        answer = input("Enter another destination? y/n: ")
         if answer == 'n':
             # to break the while loop
             user_in = True
