@@ -26,7 +26,7 @@ class Best_First():
 
     def __str__(self):
         if self.heuristic == "distance":
-            return f"~~~~~\nbest route: {self.route}\nbest distance: {self.meters_to_miles()}\n~~~~~"
+            return f"~~~~~\nbest route: {self.route}\nbest distance: {self.meters_to_miles()} miles\n~~~~~"
         elif self.heuristic == "time":
             return f"~~~~~\nbest route: {self.route}\nbest time: {self.seconds_to_time()}\n~~~~~"
 

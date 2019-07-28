@@ -1,4 +1,4 @@
-from GoogleMapsUtility import GoogleMapsUtility
+from google_maps_utility import GoogleMapsUtility
 from best_first import Best_First
 
 
@@ -27,28 +27,22 @@ best time: 1 days 23 hours 17 minutes
 """
 
 def main():
-
-
+    answer = ""
     point_list = []
-    user_in = False
-    while user_in == False:
-        start_point = input("Enter destination (City/State): ")
+    start_point = input("Enter starting point (City/State): ")
+    point_list.append(start_point)
+    while answer != "-1":
+        answer = input("Enter a destination (enter -1 to end): ")
+        if answer != "-1":
+            point_list.append(answer)  
 
-        point_list.append(start_point)
-        hit_list = point_list[1:len(point_list)]
 
-        #print(point_list)
-        #print(hit_list)
 
-        answer = input("Enter another destination? y/n: ")
-        if answer == 'n' or answer =='no':
-            # to break the while loop
-            user_in = True
-        elif answer == 'y' or answer =='yes':
-            user_in = False
-        else:
-            print("Only enter yes or no")
+    hit_list = point_list[1:len(point_list)]
 
+    print(f"point_list: {point_list}")
+    print(f"hit_list: {hit_list}")
+    
     print(Best_First(point_list[0], hit_list, "distance"))
     print(Best_First(point_list[0], hit_list, "time"))
 
