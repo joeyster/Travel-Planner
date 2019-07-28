@@ -1,5 +1,5 @@
 from address import Address
-from GoogleMapsUtility import GoogleMapsUtility
+from google_maps_utility import GoogleMapsUtility
 import heapq
 import copy
 
@@ -33,12 +33,11 @@ class Best_First():
     
     def algorithm(self, next_state):
         if len(self.hit_list) == 0:
-            return "reached end"
+            return ''
         #starting at first point
         root = next_state
 
         for point in range(len(self.hit_list)):
-            #points are addresses
             point_A = root.address
             point_B = self.hit_list[point] 
 
@@ -53,7 +52,7 @@ class Best_First():
             #add children to root. key = address, value = Address
             root.children[point_B] = Address(point_B, distance, time)
         
-        # print(f"self.open: {self.open}")
+        #pop min off min-heap
         popped = heapq.heappop(self.open) #(miles/time, addr)
         heapq.heappush(self.closed, popped)
         heuristic_value = popped[0]
