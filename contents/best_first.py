@@ -3,8 +3,7 @@ from google_maps_utility import GoogleMapsUtility
 import heapq
 import copy
 
-# enter your api key here
-api_key ='AIzaSyAlFOfYJqGZR3a_5VcbrihyaproXXWTeY4'
+
 
 class Best_First():
     def __init__(self, start, hit_list, heuristic):
@@ -14,7 +13,7 @@ class Best_First():
         self.best_distance = 0
         self.best_time = 0
         self.route = self.start
-        
+
         self.heuristic = heuristic
 
         #priority queue
@@ -30,7 +29,7 @@ class Best_First():
             return f"~~~~~\nbest route: {self.route}\nbest distance: {self.meters_to_miles()}\n~~~~~"
         elif self.heuristic == "time":
             return f"~~~~~\nbest route: {self.route}\nbest time: {self.seconds_to_time()}\n~~~~~"
-    
+
     def algorithm(self, next_state):
         if len(self.hit_list) == 0:
             return ''
@@ -39,7 +38,7 @@ class Best_First():
 
         for point in range(len(self.hit_list)):
             point_A = root.address
-            point_B = self.hit_list[point] 
+            point_B = self.hit_list[point]
 
             connection = GoogleMapsUtility()
             distance, time = connection.directionsRequest(point_A, point_B)
