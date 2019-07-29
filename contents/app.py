@@ -1,7 +1,6 @@
 from google_maps_utility import GoogleMapsUtility
 from best_first import Best_First
 
-
 """
 python3
 
@@ -36,15 +35,20 @@ def main():
         if answer != "-1":
             point_list.append(answer)  
 
-
-
     hit_list = point_list[1:len(point_list)]
 
-    print(f"point_list: {point_list}")
-    print(f"hit_list: {hit_list}")
+    # print(f"point_list: {point_list}")
+    # print(f"hit_list: {hit_list}")
     
     print(Best_First(point_list[0], hit_list, "distance"))
     print(Best_First(point_list[0], hit_list, "time"))
+
+
+def unittest(point_list, hit_list):
+    print(Best_First(point_list[0], hit_list, "distance"))
+    print(Best_First(point_list[0], hit_list, "time"))
+    return True
+
 
 if __name__ =="__main__":
     main()

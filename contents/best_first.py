@@ -31,10 +31,21 @@ class Best_First():
             return f"~~~~~\nbest route: {self.route}\nbest time: {self.seconds_to_time()}\n~~~~~"
 
     def algorithm(self, next_state):
-        if len(self.hit_list) == 0:
-            return ''
         #starting at first point
         root = next_state
+        
+        #last city to go to
+        if len(self.hit_list) == 1:
+            point_A = root.address
+            point_B = self.hit_list[0]
+
+            connection = GoogleMapsUtility()
+            distance, time = connection.directionsRequest(point_A, point_B)
+
+            self.route = self.route + " -> " + self.hit_list[0]
+            self.best_distance = self.best_distance + distance
+            self.best_time = self.best_time + time
+            return ''
 
         for point in range(len(self.hit_list)):
             point_A = root.address
