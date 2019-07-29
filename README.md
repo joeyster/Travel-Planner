@@ -1,5 +1,5 @@
 # Travel Planner
-Create a list of places that you can visit and provide multiple ways to move between cities. You can take a plane, train, boat, or drive. Each method of transit provides a price and travel time. The user will provide a starting location and destination and indicate their preferences -- fastest way to reach the destination, slowest way to reach the destination, cheapest way to reach the destination, and most expensive way to reach the destination.
+Create a list of places that you can visit and provide multiple ways to move between cities. For this travel planner, there will only be traveling by car. The user will provide a starting location and multiple locations they want to travel to and indicate their preferences -- fastest way to reach the destination, time wise or distance wise.
 
 # Developers
 1. Joey Liao
@@ -9,9 +9,8 @@ Create a list of places that you can visit and provide multiple ways to move bet
 1. Marzia Stanekzai
    1. documentation
 
-
 # Technical implementation
-test
+We implemented the Best-First search algorithm on our states and state space. For our states, we used a class structure holding multiple properties to determine how to create the state space. Rather than creating the large state space first and then running the algorithm, we created multiple trees, look through their descendants, and implementing Best-First search algorithm, and repeat until we finally hit all our locations. With the final location visited, the program will be able to give the user the route they should take and the distance/time it will be (depending on user preference).
 
 ### Compile application - recommended
 1. using a virtual environment: virtual env venv
