@@ -36,9 +36,6 @@ def main():
             point_list.append(answer)  
 
     hit_list = point_list[1:len(point_list)]
-
-    # print(f"point_list: {point_list}")
-    # print(f"hit_list: {hit_list}")
     
     print(Best_First(point_list[0], hit_list, "distance"))
     print(Best_First(point_list[0], hit_list, "time"))
