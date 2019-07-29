@@ -9,6 +9,5 @@ class Test(unittest.TestCase):
     # self.assertEqual(app.unittest(['san diego', 'anaheim', 'costa mesa', 'seattle'],['anaheim', 'costa mesa', 'seattle']), True)
     # self.assertEqual(app.unittest(['anaheim', 'buena park', 'cypress', 'fullerton'],['buena park', 'cypress', 'fullerton']), True)
 
-
 if __name__ == '__main__':
     unittest.main()

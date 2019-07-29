@@ -3,20 +3,15 @@ Create a list of places that you can visit and provide multiple ways to move bet
 
 # Developers
 1. Joey Liao
-   1. best first search implementation
-   1. Flask implementation
+   1. Best-First search implementation
 1. Rosendo Inzunza
    1. Google API implementation
-   2. Flask implementation
-
 1. Marzia Stanekzai
    1. documentation
 
 
-# Technical implementation <TBD>
-*Provide a general discussion on the data structures and algorithms that were used to achieve the goals of the project*
->You can make use of heuristics and a best-first search to implement this.
-
+# Technical implementation
+test
 
 ### Compile application - recommended
 1. using a virtual environment: virtual env venv
@@ -24,19 +19,15 @@ Create a list of places that you can visit and provide multiple ways to move bet
 3. pip install requests
 4. python3.7 app.py
 
-
-
 # Summary
-1. We will be allowing the user to enter a city or state which they would like to travel to
-2. We will use that information to pass an arguments to a GOOGLE MAP API request
-  1. the Google map API request will give us the miles from the starting point to the other cities
-  2. we will store that information to a data structure
-3. we will use the data structure to perform either a best first search to find out what the most optimal route would be to travel.
+1. We will be allowing the user to enter an address where they would start.
+2. Users will then add addresses that they want to travel to during their vacation.
+3. We will use that information to pass an arguments to a GOOGLE MAP API request.
+  1. the Google map API request will give us the miles or durations from the starting point to the other cities.
+  2. we will store that information to a data structure.
+4. we will use the data structure to perform a best first search to find out what the most optimal route would to travel.
 
 
 # Technologies used
 1. [Google API](https://developers.google.com/maps/documentation/directions/start)
 2. Best First search algorithm
-3. HTML, CSS
-4. Flask
-5. Heroku for deployment
