@@ -28,7 +28,7 @@ best time: 1 days 23 hours 17 minutes
 def main():
     answer = ""
     point_list = []
-    heuristic = input("Would you like the shortest distance or fastest time? (distance or time)")
+    heuristic = input("Would you like the shortest distance or fastest time? (distance or time): ")
     start_point = input("Enter starting point (Address, City, or State): ")
     point_list.append(start_point)
     while answer != "-1":
