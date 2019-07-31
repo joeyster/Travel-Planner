@@ -7,21 +7,20 @@ python3
 
 ---------------- sample -----------------
 
+Would you like the shortest distance or fastest time? (distance or time): distance
+Enter starting point (Address, City, or State): california
+Enter a destination (enter -1 to end): washington
+Enter a destination (enter -1 to end): florida
+Enter a destination (enter -1 to end): -1
+~
+~~~
+~~~~~
+		best route: california -> florida -> washington
+		best distance: 5767 miles
+~~~~~
+~~~
+~
 
-Enter destination (City/State): seattle
-Enter another destination? y/n: yes
-Enter destination (City/State): anaheim
-Enter another destination? y/n: y
-Enter destination (City/State): chicago
-Enter another destination? y/n: n
-~~~~~
-best route: seattle -> anaheim -> chicago
-best distance: 3171
-~~~~~
-~~~~~
-best route: seattle -> anaheim -> chicago
-best time: 1 days 23 hours 17 minutes
-~~~~~
 
 """
 
@@ -34,10 +33,10 @@ def main():
     while answer != "-1":
         answer = input("Enter a destination (enter -1 to end): ")
         if answer != "-1":
-            point_list.append(answer)  
+            point_list.append(answer)
 
     hit_list = point_list[1:len(point_list)]
-    
+
     print(Best_First(point_list[0], hit_list, heuristic))
 
 
