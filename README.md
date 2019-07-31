@@ -7,6 +7,7 @@ Create a list of places that you can visit and provide multiple ways to move bet
    1. Documentation
 1. Rosendo Inzunza
    1. Google API implementation
+   2. Documentation
 1. Marzia Stanekzai
    1. Documentation
 
