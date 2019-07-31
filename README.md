@@ -1,4 +1,4 @@
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dash.svg?color=dark-green)
+![PyPI - Python Version](https://img.shields.io/badge/python-3.7-blue)
 
 
 # Travel Planner
