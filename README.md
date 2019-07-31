@@ -1,3 +1,6 @@
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dash.svg?color=dark-green)
+
+
 # Travel Planner
 Create a list of places that you can visit and provide multiple ways to move between cities. For this travel planner, there will only be traveling by car. The user will provide a starting location and multiple locations they want to travel to and indicate their preferences -- fastest way to reach the destination, time wise or distance wise.
 
