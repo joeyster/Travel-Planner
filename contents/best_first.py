@@ -36,11 +36,11 @@ class Best_First():
             #saving data
             foo = root
             for point in range(self.total_count):
-                self.route = foo.address + "->" + self.route
+                self.route = foo.address + " -> " + self.route
                 self.best_distance = self.best_distance + foo.distance
                 self.best_time = self.best_time + foo.time
                 foo = foo.parent
-            self.route = self.route[:-2]
+            self.route = self.route[:-4]
             
             return ''
 
