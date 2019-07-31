@@ -35,3 +35,17 @@ We implemented the Best-First search algorithm on our states and state space. Fo
 # Technologies used
 1. [Google API](https://developers.google.com/maps/documentation/directions/start)
 2. Best First search algorithm
+
+
+#### example
+
+---------------- sample -----------------
+
+Would you like the shortest distance or fastest time? (distance or time): distance
+Enter starting point (Address, City, or State): california
+Enter a destination (enter -1 to end): washington
+Enter a destination (enter -1 to end): florida
+Enter a destination (enter -1 to end): -1
+
+		best route: california -> florida -> washington
+		best distance: 5767 miles
