@@ -51,6 +51,3 @@ class GoogleMapsUtility():
         
         except:
             sys.exit("Something went wrong! Try again.")
-
-
-        #duration hours later implement if have time

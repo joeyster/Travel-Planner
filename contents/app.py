@@ -28,7 +28,8 @@ best time: 1 days 23 hours 17 minutes
 def main():
     answer = ""
     point_list = []
-    start_point = input("Enter starting point (City/State): ")
+    heuristic = input("Would you like the shortest distance or fastest time? (distance or time)")
+    start_point = input("Enter starting point (Address, City, or State): ")
     point_list.append(start_point)
     while answer != "-1":
         answer = input("Enter a destination (enter -1 to end): ")
@@ -37,11 +38,10 @@ def main():
 
     hit_list = point_list[1:len(point_list)]
     
-    print(Best_First(point_list[0], hit_list, "distance"))
-    print(Best_First(point_list[0], hit_list, "time"))
+    print(Best_First(point_list[0], hit_list, heuristic))
 
 
-def unittest(point_list, hit_list):
+def testing_address(point_list, hit_list):
     print(Best_First(point_list[0], hit_list, "distance"))
     print(Best_First(point_list[0], hit_list, "time"))
     return True

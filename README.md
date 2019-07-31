@@ -4,10 +4,11 @@ Create a list of places that you can visit and provide multiple ways to move bet
 # Developers
 1. Joey Liao
    1. Best-First search implementation
+   1. Documentation
 1. Rosendo Inzunza
    1. Google API implementation
 1. Marzia Stanekzai
-   1. documentation
+   1. Documentation
 
 # Technical implementation
 We implemented the Best-First search algorithm on our states and state space. For our states, we used a class structure holding multiple properties to determine how to create the state space. Rather than creating the large state space first and then running the algorithm, we created multiple trees, look through their descendants, and implementing Best-First search algorithm, and repeat until we finally hit all our locations. With the final location visited, the program will be able to give the user the route they should take and the distance/time it will be (depending on user preference).
