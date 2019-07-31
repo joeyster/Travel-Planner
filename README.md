@@ -15,8 +15,8 @@ Create a list of places that you can visit and provide multiple ways to move bet
 We implemented the Best-First search algorithm on our states and state space. For our states, we used a class structure holding multiple properties to determine how to create the state space. Rather than creating the large state space first and then running the algorithm, we created multiple trees, look through their descendants, and implementing Best-First search algorithm, and repeat until we finally hit all our locations. With the final location visited, the program will be able to give the user the route they should take and the distance/time it will be (depending on user preference).
 
 ### Compile application - recommended
-1. using a virtual environment: virtual env venv
-2. source venv/bin/activate
+1. using a virtual environment: virtualenv venv
+2. source bin/venv/activate
 3. pip install requests
 4. python3.7 app.py
 
