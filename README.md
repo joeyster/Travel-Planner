@@ -2,7 +2,12 @@
 
 
 # Travel Planner
-Create a list of places that you can visit and provide multiple ways to move between cities. For this travel planner, there will only be traveling by car. The user will provide a starting location and multiple locations they want to travel to and indicate their preferences -- fastest way to reach the destination, time wise or distance wise.
+This program will help people plan their trips by giving them the shortest distance or the fastest route by time. We have used Google Maps API to achieve this goal. The program will ask users to input their original location, and the cities they would like to visit. Then the program will feed that data into Google API which will retrieve the distance's between those cities and use's Dijkstra's algorithm on those input nodes to find the most efficient way to Traverse between those destinations.
+
+Once user inputs their starting point and the places they would like to visit the program asks whether they would like the shortest distance or the fastest way to get there, and depending on the user preferences the program will give them the answer in the form of multilple destination points. For instance, if I want to travel from Fullerton to Los Angeles, San Diego, Newport Beach, Las Vegas, and Washington DC I would put Fullerton as my original location and all the other cities as my destinations. Then the software will run through all the nodes to find the most efficient way for me to visit all the cities by burning the least amount of fuel.
+
+For this travel planner, there will only be traveling by car. 
+
 
 # Developers
 1. Joey Liao
